@@ -4,7 +4,7 @@
 #
 Name     : compat-poppler-soname78
 Version  : 0.67.0
-Release  : 7
+Release  : 8
 URL      : https://poppler.freedesktop.org/poppler-0.67.0.tar.xz
 Source0  : https://poppler.freedesktop.org/poppler-0.67.0.tar.xz
 Summary  : No detailed summary available
@@ -94,14 +94,6 @@ Provides: compat-poppler-soname78-devel = %{version}-%{release}
 dev components for the compat-poppler-soname78 package.
 
 
-%package extras
-Summary: extras components for the compat-poppler-soname78 package.
-Group: Default
-
-%description extras
-extras components for the compat-poppler-soname78 package.
-
-
 %package lib
 Summary: lib components for the compat-poppler-soname78 package.
 Group: Libraries
@@ -139,7 +131,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542147461
+export SOURCE_DATE_EPOCH=1542147765
 mkdir -p clr-build
 pushd clr-build
 export CFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-math-errno -fno-semantic-interposition -fno-trapping-math -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -162,7 +154,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1542147461
+export SOURCE_DATE_EPOCH=1542147765
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/compat-poppler-soname78
 cp COPYING %{buildroot}/usr/share/package-licenses/compat-poppler-soname78/COPYING
@@ -385,22 +377,6 @@ popd
 %exclude /usr/lib64/pkgconfig/poppler-qt5.pc
 %exclude /usr/lib64/pkgconfig/poppler-splash.pc
 %exclude /usr/lib64/pkgconfig/poppler.pc
-
-%files extras
-%defattr(-,root,root,-)
-/usr/include/poppler/qt5/poppler-annotation.h
-/usr/include/poppler/qt5/poppler-export.h
-/usr/include/poppler/qt5/poppler-form.h
-/usr/include/poppler/qt5/poppler-link.h
-/usr/include/poppler/qt5/poppler-media.h
-/usr/include/poppler/qt5/poppler-optcontent.h
-/usr/include/poppler/qt5/poppler-page-transition.h
-/usr/include/poppler/qt5/poppler-qt5.h
-/usr/lib64/haswell/libpoppler-qt5.so
-/usr/lib64/haswell/libpoppler-qt5.so.1
-/usr/lib64/libpoppler-qt5.so
-/usr/lib64/libpoppler-qt5.so.1
-/usr/lib64/pkgconfig/poppler-qt5.pc
 
 %files lib
 %defattr(-,root,root,-)
