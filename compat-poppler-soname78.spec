@@ -4,7 +4,7 @@
 #
 Name     : compat-poppler-soname78
 Version  : 0.67.0
-Release  : 6
+Release  : 7
 URL      : https://poppler.freedesktop.org/poppler-0.67.0.tar.xz
 Source0  : https://poppler.freedesktop.org/poppler-0.67.0.tar.xz
 Summary  : No detailed summary available
@@ -139,7 +139,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542131172
+export SOURCE_DATE_EPOCH=1542147461
 mkdir -p clr-build
 pushd clr-build
 export CFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-math-errno -fno-semantic-interposition -fno-trapping-math -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -162,7 +162,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1542131172
+export SOURCE_DATE_EPOCH=1542147461
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/compat-poppler-soname78
 cp COPYING %{buildroot}/usr/share/package-licenses/compat-poppler-soname78/COPYING
@@ -404,20 +404,20 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
+%exclude /usr/lib64/haswell/libpoppler-cpp.so.0
+%exclude /usr/lib64/haswell/libpoppler-cpp.so.0.5.0
+%exclude /usr/lib64/haswell/libpoppler-glib.so.8
+%exclude /usr/lib64/haswell/libpoppler-glib.so.8.9.0
 %exclude /usr/lib64/haswell/libpoppler-qt5.so.1
+%exclude /usr/lib64/haswell/libpoppler-qt5.so.1.15.0
+%exclude /usr/lib64/libpoppler-cpp.so.0
+%exclude /usr/lib64/libpoppler-cpp.so.0.5.0
+%exclude /usr/lib64/libpoppler-glib.so.8
+%exclude /usr/lib64/libpoppler-glib.so.8.9.0
 %exclude /usr/lib64/libpoppler-qt5.so.1
-/usr/lib64/haswell/libpoppler-cpp.so.0
-/usr/lib64/haswell/libpoppler-cpp.so.0.5.0
-/usr/lib64/haswell/libpoppler-glib.so.8
-/usr/lib64/haswell/libpoppler-glib.so.8.9.0
-/usr/lib64/haswell/libpoppler-qt5.so.1.15.0
+%exclude /usr/lib64/libpoppler-qt5.so.1.15.0
 /usr/lib64/haswell/libpoppler.so.78
 /usr/lib64/haswell/libpoppler.so.78.0.0
-/usr/lib64/libpoppler-cpp.so.0
-/usr/lib64/libpoppler-cpp.so.0.5.0
-/usr/lib64/libpoppler-glib.so.8
-/usr/lib64/libpoppler-glib.so.8.9.0
-/usr/lib64/libpoppler-qt5.so.1.15.0
 /usr/lib64/libpoppler.so.78
 /usr/lib64/libpoppler.so.78.0.0
 
