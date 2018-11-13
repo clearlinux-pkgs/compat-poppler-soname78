@@ -1,0 +1,7 @@
+0.67.0
+pkgconfig(lcms2)
+curl-dev
+pkgconfig(nss)
+gtk+-dev
+qtbase-dev
+tiff-dev
