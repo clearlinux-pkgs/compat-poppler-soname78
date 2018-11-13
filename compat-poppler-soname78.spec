@@ -4,7 +4,7 @@
 #
 Name     : compat-poppler-soname78
 Version  : 0.67.0
-Release  : 2
+Release  : 3
 URL      : https://poppler.freedesktop.org/poppler-0.67.0.tar.xz
 Source0  : https://poppler.freedesktop.org/poppler-0.67.0.tar.xz
 Summary  : No detailed summary available
